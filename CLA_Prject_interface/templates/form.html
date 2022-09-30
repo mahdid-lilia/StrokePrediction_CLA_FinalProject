@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>-->
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="titre">Stroke prediction</div>
+            <div class="sous-titre">Predict whether your patients are more likely to get stroke or not</div>
+        </header>
+
+
+        <form action="/prediction" method="POST">
+            <div class="form">
+                <div class="fields">
+                    <div class="one-line-feild">
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="number" name="age" placeholder="Enter your patient's age" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Body Mass Index (BMI)</label>
+                            <input type="number" name="bmi" step=0.000001 placeholder="Enter your patient's body mass index" required>
+                        </div>
+                    </div>
+                    <div class="one-line-feild">
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select name="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>How often does the patient smoke?</label>
+                            <select name="smoke" required>
+                                <option disabled selected>Select </option>
+                                <option>smokes</option>
+                                <option>formerly smoked</option>
+                                <option>never smoked</option>
+                                <option>choose not to reveal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="one-line-feild">
+                        <div class="input-field">
+                            <label>Does the patient have hypertension ?</label>
+                            <select name="hypertension" required>
+                                <option disabled selected>Select </option>
+                                <option>yes</option>
+                                <option>no</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Has the patient ever been married ?</label>
+                            <select name="married" required>
+                                <option disabled selected>Select </option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="one-line-feild">
+                        <div class="input-field">
+                            <label>Does the patient have heart disease ?</label>
+                            <select name="heartdisease" required>
+                                <option disabled selected>Select </option>
+                                <option>yes</option>
+                                <option>no</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>What type of work does the patient do ?</label>
+                            <select name="job" required>
+                                <option disabled selected>Select </option>
+                                <option>Government job</option>
+                                <option>Self-employed</option>
+                                <option>Private job</option>
+                                <option>Children</option>
+                                <option>Never worked</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="one-line-feild">
+                        <div class="input-field">
+                            <label>Average Glucose level</label>
+                            <input type="number" name="glucose" step=0.01 placeholder="Enter your patient's age" required>
+                        </div>
+                        <div class="input-field">
+                            <label>In what type of residence does the patient live ?</label>
+                            <select name="residence" id="residence" required>
+                                <option disabled selected>Select </option>
+                                <option>Rural</option>
+                                <option>Urban</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-btn">
+                    <button class="sumbit">
+                        <a class='btnText'>Predict</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <script src="{{ url_for('static', filename='Script.js') }}"></script>
+    </div>
+</body>
+
+</html>

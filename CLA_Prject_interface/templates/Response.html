@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!----===== PyScript ===== -->
+    <!--<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+
+</head>
+
+
+<body onload="getprobability({{proba}})">
+
+    <div class="container">
+        <header class="header">
+            <div class="titre">Stroke prediction</div>
+            <div class="sous-titre">Predict whether your patients are more likely to get stroke or not</div>
+        </header>
+        <div class="Response">
+            <div class="sentence">
+                <div class="static">
+                    This patient is
+                </div>
+                <div class="dynamic" id="dynamic">
+                    <!-- here the content will be dynamically added from js script-->
+                </div>
+
+                <div class="static">
+                    likely to get a Stroke !
+                </div>
+            </div>
+
+            <div id="cercle">
+                <!-- here the content will be dynamically added from js script-->
+            </div>
+        </div>
+</body>
+<script src="{{ url_for('static', filename='Script.js') }}"></script>
+
+</html>
