@@ -6,9 +6,9 @@ Here is the <a href="https://stroke-prediction-cla.herokuapp.com/"> link </a>  t
 Members of our team:
 <ul>
   <li> Imane CHERIFI </li>
-  <li> KHEDIR Meriem </li>
-  <li> KARABERNOU mohamedislem</li>
+  <li>  Meriem KHEDIR </li>
+  <li> Mohamedislem KARABERNOU </li>
   <li> Lilia MAHDID </li>
-  <li> BERRACHEDI Yousra</li>
+  <li> Yousra BERRACHEDI </li>
 </ul>
 
